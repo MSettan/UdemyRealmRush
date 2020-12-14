@@ -7,6 +7,9 @@ public class Waypoint : MonoBehaviour
     // Start is called before the first frame update
     const int gridSize = 10;
 
+    public bool isExplored = false;
+    public Waypoint exploredFrom;
+    
     private Vector2Int gridPos;
 
     public int GetGridSize()
@@ -21,5 +24,11 @@ public class Waypoint : MonoBehaviour
             Mathf.RoundToInt(transform.position.x / 10f),
             Mathf.RoundToInt(transform.position.z / 10f)
             );
+    }
+
+    public void SetTopColor(Color color)
+    {
+        MeshRenderer topMeshRender = transform.Find("Top").GetComponent<MeshRenderer>();
+        topMeshRender.material.color = color;
     }
 }

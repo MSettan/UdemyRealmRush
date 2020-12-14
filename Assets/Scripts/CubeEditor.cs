@@ -8,13 +8,13 @@ using UnityEngine.UI;
 [SelectionBase]
 [RequireComponent(typeof(Waypoint))]
 public class CubeEditor : MonoBehaviour
-{ 
+{
     private TextMesh textMesh;
     private Vector3 gridPos;
     private Waypoint waypoint;
-        
-    
-    // Update is called once per frame
+
+
+// Update is called once per frame
     private void Awake()
     {
         waypoint = GetComponent<Waypoint>();

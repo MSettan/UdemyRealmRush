@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,5 +20,9 @@ public class EnemyMovement : MonoBehaviour
             yield return new WaitForSeconds(1f); ;
         }
     }
-    
+
+    private void OnParticleCollision(GameObject other)
+    {
+        print("Someone hit us");
+    }
 }

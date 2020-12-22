@@ -7,20 +7,35 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private Transform objectToPan;
     [SerializeField] private Transform targetEnemy;
+    [SerializeField] private float shootDistance = 20;
     [SerializeField] private GameObject shootFX;
 
-    private int hitPoints = 10;
+    private ParticleSystem.EmissionModule _shootEmission;
+
+    private void Start()
+    {
+        _shootEmission = shootFX.GetComponent<ParticleSystem>().emission;//on, off firing
+    }
 
     void Update()
     {
         objectToPan.LookAt(targetEnemy);
+
+        FireAtEnemy();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void FireAtEnemy()
     {
-        Collider shootCollider = shootFX.GetComponent<Collider>();
+        float checkDistance = Vector3.Distance(objectToPan.position,targetEnemy.position);
         
-            print("Yep");
-        
+        if (checkDistance <= shootDistance)
+        {
+            _shootEmission.enabled = true;
+        }
+        else
+        {
+            _shootEmission.enabled = false;
+        }
     }
+    
 }

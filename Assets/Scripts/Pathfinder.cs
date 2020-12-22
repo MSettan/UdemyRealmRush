@@ -11,15 +11,17 @@ public class Pathfinder : MonoBehaviour
     [SerializeField] private List<Waypoint> path;//todo make private
 
     [SerializeField] private Waypoint startWaypoint, endWaypoint;
-    [SerializeField] private bool _isRunning = true; //todo private
+    [SerializeField] private bool isRunning = true; //todo private
     
     public List<Waypoint> GetPath()
     {
-        LoadBlocks();
-        ColorStartAndEnd();
-        Pathfind();
-        BreadthFirstSearch();
-        CreatePath();
+        if (isRunning)
+        {
+            LoadBlocks();
+            Pathfind();
+            BreadthFirstSearch();
+            CreatePath();
+        }
         return path;
     }
     
@@ -56,7 +58,7 @@ public class Pathfinder : MonoBehaviour
     {
         _queue.Enqueue(startWaypoint);
 
-        while (_queue.Count > 0 && _isRunning)
+        while (_queue.Count > 0 && isRunning)
         {
             _searchCenter = _queue.Dequeue();
             HaltIfEndFound();
@@ -69,14 +71,14 @@ public class Pathfinder : MonoBehaviour
     {
         if (endWaypoint == _searchCenter)
         {
-            _isRunning = false;
+            isRunning = false;
             print("Searching waypoint was find");
         }
     }
 
     private void ExploreNeighbours()
     {
-        if(!_isRunning){return;}
+        if(!isRunning){return;}
         
         foreach (Vector2Int direction in directions)
         {
@@ -105,13 +107,7 @@ public class Pathfinder : MonoBehaviour
             }
         }
     }
-    
-    private void ColorStartAndEnd()
-    {
-        startWaypoint.SetTopColor(Color.blue);
-        endWaypoint.SetTopColor(Color.yellow);
-    }
-    
+
     private void LoadBlocks()   
     {
         var waypoints = FindObjectsOfType<Waypoint>();

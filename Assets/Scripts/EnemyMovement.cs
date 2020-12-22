@@ -20,9 +20,4 @@ public class EnemyMovement : MonoBehaviour
             yield return new WaitForSeconds(1f); ;
         }
     }
-
-    private void OnParticleCollision(GameObject other)
-    {
-        print("Someone hit us");
-    }
 }

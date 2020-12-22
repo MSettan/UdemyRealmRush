@@ -6,6 +6,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CubeEditor.cs" t="Include" />
+          <e p="EnemyDamage.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
           <e p="Pathfinder.cs" t="Include" />
           <e p="Tower.cs" t="Include" />

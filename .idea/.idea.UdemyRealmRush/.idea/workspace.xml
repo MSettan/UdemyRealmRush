@@ -39,15 +39,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lZEkLWlwaRKkUhBjdSVOMePwQY" />
@@ -105,6 +107,7 @@
       <workItem from="1607953664598" duration="693000" />
       <workItem from="1607962685943" duration="12860000" />
       <workItem from="1608581592241" duration="3016000" />
+      <workItem from="1608666429652" duration="4252000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +10,14 @@ public class Waypoint : MonoBehaviour
 
     public bool isExplored = false;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
     
     private Vector2Int gridPos;
+
+    private void Start()
+    {
+        Physics.queriesHitTriggers = true;
+    }
 
     public int GetGridSize()
     {
@@ -26,9 +33,12 @@ public class Waypoint : MonoBehaviour
             );
     }
 
-    public void SetTopColor(Color color)
-    {
-        MeshRenderer topMeshRender = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRender.material.color = color;
-    }
+     private void OnMouseOver()
+     {
+         if (Input.GetMouseButtonDown(0) && isPlaceable) 
+         {
+             print("This on " + gameObject.name);
+         }
+     }
+     
 }

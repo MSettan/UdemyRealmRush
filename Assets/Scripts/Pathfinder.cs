@@ -36,17 +36,26 @@ public class Pathfinder : MonoBehaviour
     private void CreatePath()
     {
         path.Add(endWaypoint);
-
+        SetAsPath(endWaypoint);
+        
         Waypoint previous = endWaypoint.exploredFrom;
+
         while (previous != startWaypoint)
         {
             path.Add(previous);
             previous = previous.exploredFrom;
+            SetAsPath(previous);
         }
 
-        path.Add(startWaypoint);
+        SetAsPath(startWaypoint);
+        
         path.Reverse();
+    }
 
+    void SetAsPath(Waypoint waypoint)
+    {
+        waypoint.isPlaceable = false;
+        waypoint = endWaypoint.exploredFrom;
     }
 
     private void BreadthFirstSearch()
@@ -95,7 +104,6 @@ public class Pathfinder : MonoBehaviour
                 else
                 {
                     neighbour.exploredFrom = _searchCenter;
-                    neighbour.SetTopColor(Color.grey);
                     _queue.Enqueue(neighbour);
                     //print("Queueing: " + neighbour.name); todo delete this
                 }

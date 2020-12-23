@@ -48,10 +48,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lZEkLWlwaRKkUhBjdSVOMePwQY" />
@@ -74,6 +74,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -110,7 +111,7 @@
       <workItem from="1607962685943" duration="12860000" />
       <workItem from="1608581592241" duration="3016000" />
       <workItem from="1608666429652" duration="4252000" />
-      <workItem from="1608752000621" duration="8448000" />
+      <workItem from="1608752000621" duration="8812000" />
     </task>
     <servers />
   </component>
@@ -133,11 +134,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="624" y="248" key="run.anything.popup" timestamp="1607883359724">
-      <screen x="0" y="0" width="1920" height="728" />
-    </state>
-    <state x="624" y="248" key="run.anything.popup/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1607883359724" />
   </component>
 </project>

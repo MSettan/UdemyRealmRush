@@ -6,6 +6,8 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private Tower towerPrefab;
+    
     const int gridSize = 10;
 
     public bool isExplored = false;
@@ -35,9 +37,11 @@ public class Waypoint : MonoBehaviour
 
      private void OnMouseOver()
      {
-         if (Input.GetMouseButtonDown(0) && isPlaceable) 
+         if (Input.GetMouseButtonDown(0) && isPlaceable)
          {
-             print("This on " + gameObject.name);
+             Instantiate(towerPrefab, transform.position, Quaternion.identity);
+             isPlaceable = false;
+             //print("This on " + gameObject.name);
          }
      }
      

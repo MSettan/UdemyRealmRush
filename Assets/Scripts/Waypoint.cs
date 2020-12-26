@@ -6,7 +6,6 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Tower towerPrefab;
     
     const int gridSize = 10;
 
@@ -39,9 +38,7 @@ public class Waypoint : MonoBehaviour
      {
          if (Input.GetMouseButtonDown(0) && isPlaceable)
          {
-             Instantiate(towerPrefab, transform.position, Quaternion.identity);
-             isPlaceable = false;
-             //print("This on " + gameObject.name);
+            FindObjectOfType<TowerFactory>().AddTower(this);
          }
      }
      

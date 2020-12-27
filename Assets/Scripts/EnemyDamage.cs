@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class EnemyDamage : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class EnemyDamage : MonoBehaviour
         {
             var particleSystem = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             particleSystem.Play();
+            
+            float destroyDelay = particleSystem.main.duration;
+            Destroy(particleSystem.gameObject, destroyDelay);
+            
             Destroy(gameObject);
         }
     }

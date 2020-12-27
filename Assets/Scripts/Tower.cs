@@ -14,6 +14,8 @@ public class Tower : MonoBehaviour
     private Transform _targetEnemy;
     private ParticleSystem.EmissionModule _shootEmission;
 
+    public Waypoint baseWaypoint;
+
     private void Start()
     {
         _shootEmission = shootFX.GetComponent<ParticleSystem>().emission;//on, off firing

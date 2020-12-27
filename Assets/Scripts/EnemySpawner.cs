@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private EnemyMovement enemyPrefab;
     [SerializeField] private float secondsBetweenSpawn = 2f;
+    [SerializeField] private Transform parentEnemy;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(enemyPrefabCopy, gameObject.transform.position, Quaternion.identity);
+            var newEnemy = Instantiate(enemyPrefabCopy, gameObject.transform.position, Quaternion.identity);
+            newEnemy.transform.parent = parentEnemy;
             yield return new WaitForSeconds(secondsBetweenSpawn);
         }
     }

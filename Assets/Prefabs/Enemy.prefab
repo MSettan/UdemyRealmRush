@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d4ca12e8868a74f919f213f0eecbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementPeriod: 0.5
+  goalParticle: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0, type: 3}
 --- !u!114 &114078703179129330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19508,6 +19510,10 @@ PrefabInstance:
     - target: {fileID: 198554004130006392, guid: dcf9cd10c07cf0c49863969befadb243, type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198801791596541968, guid: dcf9cd10c07cf0c49863969befadb243, type: 3}
+      propertyPath: lengthInSec
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198801791596541968, guid: dcf9cd10c07cf0c49863969befadb243, type: 3}
       propertyPath: playOnAwake

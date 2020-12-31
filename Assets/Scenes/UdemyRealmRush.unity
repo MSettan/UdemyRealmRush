@@ -1037,6 +1037,10 @@ PrefabInstance:
       propertyPath: damageSound
       value: 
       objectReference: {fileID: 8300000, guid: c94e39bf7bde640879b9e6f70d089295, type: 3}
+    - target: {fileID: 7827998634848163803, guid: 04f81ff9814844ccfa08226f8d46a3f4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f81ff9814844ccfa08226f8d46a3f4, type: 3}
 --- !u!4 &480934186 stripped
@@ -1321,6 +1325,7 @@ MonoBehaviour:
   health: 10
   healthDecrease: 1
   healthText: {fileID: 1722145142}
+  playerHitSound: {fileID: 0}
 --- !u!65 &665644392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2762,6 +2767,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4817509252035184042, guid: a467c20795e0fed40b0d21d2bebe3b04, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a467c20795e0fed40b0d21d2bebe3b04, type: 3}
 --- !u!1001 &1326673321
@@ -3933,7 +3942,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3842208def35f31019316e4f86a4854e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

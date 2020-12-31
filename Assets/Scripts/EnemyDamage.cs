@@ -9,6 +9,9 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticlePrefab;
     [SerializeField] private ParticleSystem deathParticlePrefab;
     [SerializeField] private AudioClip damageSound;
+    [SerializeField] private AudioClip dieSound;
+    
+    
     
     private void OnParticleCollision(GameObject other)
     {
@@ -29,8 +32,11 @@ public class EnemyDamage : MonoBehaviour
             var particleSystem = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             particleSystem.Play();
             
+            
+
             float destroyDelay = particleSystem.main.duration;
             Destroy(particleSystem.gameObject, destroyDelay);
+            AudioSource.PlayClipAtPoint(dieSound, transform.position);
             
             Destroy(gameObject);
         }
